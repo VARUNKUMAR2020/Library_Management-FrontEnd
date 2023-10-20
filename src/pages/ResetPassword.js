@@ -12,7 +12,7 @@ const ResetPassword = () => {
     if (password === confirmPassword) {
       axios
         .post(
-          "http://localhost:7000/library/reseetPassword",
+          "https://librarymanagementsysytem.onrender.com/reseetPassword",
           {
             password,
             token: localStorage.getItem("token"),

@@ -6,7 +6,7 @@ const ForgotPassword = () => {
 
   const handleLink = () => {
     axios
-      .post("http://localhost:7000/library/forgotpassword", { email })
+      .post("https://librarymanagementsysytem.onrender.com/forgotpassword", { email })
       .then((res) => {
         if (res.data.status) {
           alert(res.data.message);
