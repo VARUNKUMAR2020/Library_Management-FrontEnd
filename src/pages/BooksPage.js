@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const BooksCollection = ({ data, setData }) => {
   const [selectedUser, setSelectedUser] = useState(null);
-  const navigate = useNavigate();
 
   const handleEdit = (user) => {
     setSelectedUser({ ...user, isEditing: true });
@@ -30,6 +29,7 @@ const BooksCollection = ({ data, setData }) => {
 
   return (
     <div>
+      <Navbar/>
       <table className="table mt-3">
         <thead className="bg-dark">
           <tr>

@@ -13,7 +13,7 @@ const Navbar = () => {
             class="nav-link active"
             style={{ color: "white", textDecoration: "inherit" }}
             aria-current="page"
-            to="/"
+            to="/home"
           >
             Home
           </NavLink>

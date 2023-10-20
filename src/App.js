@@ -1,12 +1,15 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Books from "./components/Books";
-import Navbar from "./components/Navbar";
 import Homepage from "./pages/Homepage";
 import BooksCollection from "./pages/BooksPage";
 import Author from "./components/Author";
 import AuthorCollection from "./pages/AuthorPage";
 import { useState } from "react";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import ResetPassword from "./pages/ResetPassword";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   const [data, setData] = useState([]);
@@ -31,9 +34,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/forgotPassword" element={<ForgotPassword/>} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/resetPassword"  element={<ResetPassword/>}/>
+          <Route path="/home" element={<Homepage />} />
           <Route
             path="/Books"
             element={

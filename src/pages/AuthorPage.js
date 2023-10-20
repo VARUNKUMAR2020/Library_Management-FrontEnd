@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const AuthorCollection = ({ author, setAuthor, authedit, setAuthEdit }) => {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ const AuthorCollection = ({ author, setAuthor, authedit, setAuthEdit }) => {
 
   return (
     <div>
+      <Navbar/>
       <table class="table mt-3">
         <thead className="bg-dark">
           <tr>
